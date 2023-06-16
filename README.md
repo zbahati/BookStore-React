@@ -82,7 +82,7 @@
 - **[Displays a list of books]**
 - **[Allows users to add new books to the list]**
 - **[Allows users to remove books from the list]**
-- **[Persists book data using local storage]**
+- **[Use API]**
 
 
 
@@ -90,12 +90,6 @@
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
- <p><a href="#">DEMO COMMING SOON </a></p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
