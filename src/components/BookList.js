@@ -1,23 +1,15 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { RemoveBook } from '../redux/book/BookSlice';
 
 const BookList = () => {
-  const [Book] = useState([
-    {
-      id: 1,
-      title: 'Magic Book',
-      author: 'Bahati',
-    },
-    {
-      id: 2,
-      title: 'Man With The Ambition',
-      author: 'Antoine',
-    },
-  ]);
+  const { books } = useSelector((state) => state.book);
+  const dispatch = useDispatch();
+
   return (
     <div className="list">
       <h3>Book List</h3>
       <ul>
-        {Book.map((book) => (
+        {books.map((book) => (
           <li key={book.id}>
             <span>
               {book.title}
@@ -25,9 +17,9 @@ const BookList = () => {
             </span>
             <br />
             <span>{book.author}</span>
-            <button type="button" className="delete-button" title="delete">
-              <span className="delete-hide">delete</span>
-              <i className="fa-solid fa-trash" />
+            <span>{book.category}</span>
+            <button type="button" className="delete-button" title="delete" onClick={() => dispatch(RemoveBook(book.id))}>
+              <span>Remove</span>
             </button>
           </li>
         ))}
