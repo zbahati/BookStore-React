@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import books from '../../components/bookItems';
 
 const initialState = {
-  books: [],
+  books,
 };
 const bookSlice = createSlice({
   name: 'book',
@@ -13,7 +14,7 @@ const bookSlice = createSlice({
 
     RemoveBook: (state, action) => {
       const bookId = action.payload;
-      state.books = state.books.filter((book) => book.id === bookId);
+      state.books = state.books.filter((book) => book.id !== bookId);
     },
   },
 
