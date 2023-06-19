@@ -1,9 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { RemoveBook } from '../redux/book/BookSlice';
+import { useEffect } from 'react';
+import { RemoveBook, fetchBooks } from '../redux/book/BookSlice';
 
 const BookList = () => {
   const { books } = useSelector((state) => state.book);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  },[dispatch,books]);
 
   return (
     <div className="list">
