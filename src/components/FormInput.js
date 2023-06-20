@@ -1,21 +1,25 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { AddBook } from '../redux/book/BookSlice';
+import { addBookApi } from '../redux/book/BookSlice';
 
 const NewBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
     const newBook = {
-      id: Date.now().toString(),
+      item_id: Date.now().toString(),
       title,
       author,
       category: '',
     };
 
-    dispatch(AddBook(newBook));
+    await dispatch(addBookApi(newBook));
+
+    // Reset form values after the dispatch is complete
+    setTitle('');
+    setAuthor('');
   };
 
   return (
