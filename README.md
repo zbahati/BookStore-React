@@ -195,7 +195,7 @@ show me your support by following me on github and giving me a star please .
 
 ## 🙏 Acknowledgments <a name="acknowledgements">Microverse</a>
 
-1.I would like to thank Microverse for guidance and support in this project and always.
+1.I would like to thank Microverse for guidance and support in this project and always.<br>
 2.A big thanks goes to USMAN SULEIMAN BABAKOLO who give the UI inspiration to create this BookStore project using his UI.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
