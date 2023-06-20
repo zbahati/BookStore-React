@@ -1,33 +1,38 @@
-import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { RemoveBook, fetchBooks } from '../redux/book/BookSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { DeleteBookApi, fetchBooks } from '../redux/book/BookSlice';
 
 const BookList = () => {
   const { books } = useSelector((state) => state.book);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchBooks());
-  },[dispatch,books]);
+  }, [dispatch, books]);
+
+  const DeleteHandler = (key) => {
+    dispatch(DeleteBookApi(key));
+  };
 
   return (
     <div className="list">
       <h3>Book List</h3>
       <ul>
-        {books.map((book) => (
-          <li key={book.id}>
-            <span>
-              {book.title}
-              {' '}
-            </span>
-            <br />
-            <span>{book.author}</span>
-            <span>{book.category}</span>
-            <button type="button" className="delete-button" title="delete" onClick={() => dispatch(RemoveBook(book.id))}>
-              <span>Remove</span>
-            </button>
-          </li>
-        ))}
+        {Object.keys(books)
+          && Object.keys(books).map((key) => books[key].map((book) => (
+            <li key={key}>
+              <div>
+                Title:
+                {book.title}
+              </div>
+              <div>
+                Author:
+                {book.author}
+              </div>
+              <div>
+                <button type="button" onClick={() => DeleteHandler(key)}> Remove</button>
+              </div>
+            </li>
+          )))}
       </ul>
     </div>
   );
