@@ -1,7 +1,276 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-.delete-hide {
-  display: none;
+:root {
+  --pale-gray: #f5f6fa;
+  --white-dark: #fafafa;
+  --white-light: #fff;
+  --body-back: rgb(237, 234, 234);
+  --blue-azure: #0290ff;
+  --gray-dark: #888;
+  --black-dark: #121212;
+}
+
+h1 {
+  font-size: x-large;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--pale-gray);
+  height: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.3);
+}
+
+header,
+.list .books li {
+  background-color: var(--white-light);
+}
+
+header {
+  margin: 5%  auto 0 auto;
+  width: 100%;
+  padding: 20px 0;
+}
+
+nav {
+  width: 85%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+nav h1 {
+  color: var(--blue-azure);
+}
+
+nav,
+nav ul {
+  align-items: center;
+}
+
+nav,
+nav ul,
+.list .books .book-card,
+.list .books li .book-card .button-card,
+.form-add-book,
+.card-layout,
+.percentage {
+  display: flex;
+}
+
+nav ul {
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--gray-dark);
+}
+
+nav ul li .active {
+  color: var(--black-dark);
+  font-weight: 500;
+}
+
+nav button {
+  border-radius: 50%;
+  padding: 10px 12px;
+  border: none;
+}
+
+nav button i {
+  color: var(--blue-azure);
+}
+
+main {
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 auto 4% auto;
+  background-color: var(--body-back);
+}
+
+.chapter .chapter-card small {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--gray-dark);
+}
+
+.chapter button {
+  gap: 20px;
+}
+
+.list .books {
+  width: 85%;
+  margin: auto;
+}
+
+.list .books li {
+  width: 100%;
+  margin: 13px 0;
+  padding: 10px 0;
+}
+
+.list .books li .book-card {
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+
+.list .books li .book-card p {
+  font-size: large;
+  font-weight: 500;
+}
+
+.list .books li .book-card small {
+  color: var(--blue-azure);
+  padding: 0 0 15px 0;
+}
+
+.list .books li .book-card .button-card {
+  padding: 10px 0;
+  gap: 20px;
+}
+
+.list .books li .book-card .button-card button {
+  background-color: transparent;
+  color: var(--blue-azure);
+  font-size: medium;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.list .books li .book-card .button-card button:hover {
+  color: #0562a9;
+}
+
+.list .books li .book-card .button-card button:not(:last-child) {
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-color: rgb(246, 245, 245);
+  padding: 0 10px 0 0;
+}
+
+.list .books li .book-card .button-card button:last-child {
+  border: none;
+  padding: 0 10px;
+}
+
+.line {
+  width: 85%;
+  background-color: #fbf2f2;
+  height: 2px;
+  border: none;
+  margin: auto;
+}
+
+.newbook {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.newbook h1 {
+  color: var(--gray-dark);
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.form-add-book {
+  width: 100%;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.form-add-book input:nth-child(1) {
+  width: 60%;
+  border: none;
+  outline: none;
+}
+
+.form-add-book input:nth-child(2) {
+  width: 20%;
+  border: none;
+  outline: none;
+  padding: 2px;
+  font-size: 14px;
+}
+
+.form-add-book input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.form-add-book input:focus {
+  border: 1px solid var(--blue-azure);
+}
+
+.newbook .add-book {
+  width: 14%;
+  text-transform: uppercase;
+  background-color: var(--blue-azure);
+  border: none;
+  font-weight: 600;
+  color: var(--white-light);
+  padding: 10px 0;
+}
+
+.newbook .add-book:hover {
+  transform: scale(0.98);
+}
+
+.newbook .add-book:active {
+  background-color: #0562a9;
+}
+
+.under-construction {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.card-layout {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.percentage {
+  width: 14%;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.chapter {
+  width: 33%;
+}
+
+.chapter .chapter-card {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chapter .chapter-card .update-progress {
+  background: var(--blue-azure);
+  border: none;
+  padding: 8px 0;
+  border-radius: 3px;
+  color: var(--white-dark);
+}
+
+.chapter .chapter-card .update-progress:hover {
+  transform: scale(0.98);
 }

@@ -4,7 +4,7 @@ const Category = () => {
   const { status } = useSelector((state) => state.category);
   return (
     <div>
-      <p>{status}</p>
+      <p className="under-construction">{status}</p>
     </div>
   );
 };
