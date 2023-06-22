@@ -75,7 +75,7 @@
 </details>
 
 ## LINK TO LIVE DEMO
-<a href='https://bookstore-2g7n.onrender.com'>Book store link</a>
+<a href='https://bookstore-2g7n.onrender.com'>Book store live Demo</a>
 
 <!-- Features -->
 
