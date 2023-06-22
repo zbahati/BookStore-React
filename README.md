@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-<img height='200px' width='50%' style="margin: auto" src="./Mylogo.png">
+<img height='200px' width='200px' style="margin: auto" src="./Mylogo.png">
 
   <h3><b>React and Redux BookStore project</b></h3>
 
