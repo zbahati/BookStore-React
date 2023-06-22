@@ -4,6 +4,7 @@ import NewBook from '../components/FormInput';
 const Book = () => (
   <div>
     <BookList />
+    <hr className="line" />
     <NewBook />
   </div>
 );

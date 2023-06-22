@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+<img height='200px' width='200px' src="./Mylogo.png">
 
   <h3><b>React and Redux BookStore project</b></h3>
 

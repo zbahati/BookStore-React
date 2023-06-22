@@ -24,23 +24,20 @@ const NewBook = () => {
 
   return (
     <div className="newbook">
-      <h3>ADD BOOK</h3>
-      <form onSubmit={submitHandler}>
+      <h1>ADD NEW BOOK</h1>
+      <form onSubmit={submitHandler} className="form-add-book">
         <input
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder=" New Book"
+          placeholder=" Book title"
           required
         />
-        <input
-          type="text"
-          value={author}
-          onChange={(e) => setAuthor(e.target.value)}
-          placeholder=" Add Author"
-          required
-        />
-        <button type="submit">Add Book</button>
+        <select>
+          <option value="" hidden selected>Category</option>
+        </select>
+
+        <button type="submit" className="add-book">Add Book</button>
       </form>
     </div>
   );
