@@ -23,6 +23,7 @@ const BookList = () => {
             <li key={key}>
               <div className="card-layout">
                 <div className="book-card">
+                  <small id="book-category">Action</small>
                   <p>{book.title}</p>
                   <small>{book.author}</small>
                   <div className="button-card">

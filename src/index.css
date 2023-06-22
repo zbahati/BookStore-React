@@ -9,7 +9,6 @@
   --pale-gray: #f5f6fa;
   --white-dark: #fafafa;
   --white-light: #fff;
-  --body-back: rgb(237, 234, 234);
   --blue-azure: #0290ff;
   --gray-dark: #888;
   --black-dark: #121212;
@@ -20,8 +19,9 @@ h1 {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--pale-gray);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  background-color: var(--white-dark);
   height: 100%;
 }
 
@@ -37,7 +37,7 @@ header,
 }
 
 header {
-  margin: 5%  auto 0 auto;
+  margin: 2%  auto 0 auto;
   width: 100%;
   padding: 20px 0;
 }
@@ -83,7 +83,8 @@ nav ul li .active {
 nav button {
   border-radius: 50%;
   padding: 10px 12px;
-  border: none;
+  border: solid 1px var(--gray-dark);
+  background-color: transparent;
 }
 
 nav button i {
@@ -95,6 +96,11 @@ main {
   padding: 20px 0;
   margin: 0 auto 4% auto;
   background-color: var(--body-back);
+}
+
+#book-category {
+  color: var(--gray-dark);
+  font-weight: 700;
 }
 
 .chapter .chapter-card small {
@@ -120,17 +126,19 @@ main {
 
 .list .books li .book-card {
   flex-direction: column;
-  width: 50%;
+  width: 45%;
   margin: auto;
 }
 
 .list .books li .book-card p {
   font-size: large;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .list .books li .book-card small {
-  color: var(--blue-azure);
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
   padding: 0 0 15px 0;
 }
 
@@ -141,10 +149,10 @@ main {
 
 .list .books li .book-card .button-card button {
   background-color: transparent;
-  color: var(--blue-azure);
-  font-size: medium;
-  font-family: 'Roboto Slab', serif;
-  font-weight: 400;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
 }
 
 .list .books li .book-card .button-card button:hover {
@@ -155,8 +163,8 @@ main {
   border-top: none;
   border-left: none;
   border-bottom: none;
-  border-color: rgb(246, 245, 245);
-  padding: 0 10px 0 0;
+  border-right: solid 1.3px #e8e8e8;
+  padding: 0 12px 0 0;
 }
 
 .list .books li .book-card .button-card button:last-child {
@@ -166,9 +174,7 @@ main {
 
 .line {
   width: 85%;
-  background-color: #fbf2f2;
-  height: 2px;
-  border: none;
+  border: solid 1px #e8e8e8;
   margin: auto;
 }
 
@@ -190,17 +196,30 @@ main {
 }
 
 .form-add-book input:nth-child(1) {
-  width: 60%;
+  width: 55%;
   border: none;
+  color: #c4c4c4;
   outline: none;
 }
 
-.form-add-book input:nth-child(2) {
-  width: 20%;
+.form-add-book select {
+  width: 25%;
   border: none;
   outline: none;
+  color: #c4c4c4;
   padding: 2px;
   font-size: 14px;
+}
+
+.form-add-book select:focus {
+  border: 1px solid var(--blue-azure);
+}
+
+.form-add-book select::placeholder {
+  color: #c4c4c4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 10px;
 }
 
 .form-add-book input::placeholder {
@@ -244,10 +263,18 @@ main {
 }
 
 .percentage {
-  width: 14%;
+  width: 19%;
   align-items: center;
   gap: 10px;
   justify-content: space-between;
+}
+
+.percentage::after {
+  content: '';
+  margin-left: 30px;
+  width: 0.125rem;
+  height: 4.375rem;
+  background: #e8e8e8;
 }
 
 .chapter {
@@ -273,4 +300,14 @@ main {
 
 .chapter .chapter-card .update-progress:hover {
   transform: scale(0.98);
+}
+
+#percentage-number {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+#progress-title {
+  color: #888;
 }
