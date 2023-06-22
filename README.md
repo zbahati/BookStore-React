@@ -73,9 +73,8 @@
     <li><a href="/">n/a</a></li>
   </ul>
 </details>
-<!---LIVE DEMO-->
-### Live Demo
-<a name="key-features"></a>****</br>
+
+## LINK TO LIVE DOM 
 <a href='https://bookstore-2g7n.onrender.com'>Book store link</a>
 
 <!-- Features -->
